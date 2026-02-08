@@ -1,0 +1,33 @@
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AuthLayout.cshtml";
+    ViewData["Title"] = "Logout";
+}
+
+<div class="auth-shell">
+    <div class="auth-card auth-card-narrow">
+        <section class="auth-form-panel auth-single-panel">
+            <h1 class="auth-title">Signed Out</h1>
+            <p class="auth-subtitle">
+                This is a UI-only logout page.
+                You can sign in again or return to the homepage.
+            </p>
+
+            <a class="auth-submit-btn d-block text-center mb-3"
+               asp-route="login-shortcut">
+                Back to sign in
+            </a>
+
+            <a class="social-btn justify-content-center text-decoration-none"
+               asp-area=""
+               asp-controller="Home"
+               asp-action="Index">
+                Go to homepage
+            </a>
+        </section>
+
+        <section class="auth-image-panel">
+            <img src="~/images/img1.png"
+                 alt="Floral artwork for login page" />
+        </section>
+    </div>
+</div>

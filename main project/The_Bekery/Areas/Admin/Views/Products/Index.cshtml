@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Products";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-start mb-4">
+    <div>
+        <h3 class="mb-1">Products</h3>
+        <div class="text-muted">Manage catalog items for storefront and staff</div>
+    </div>
+
+    <a class="btn btn-primary" asp-area="Admin" asp-controller="Orders" asp-action="Index">
+        View Orders
+    </a>
+</div>
+
+<div class="row g-3">
+    <div class="col-md-6">
+        <div class="card-soft p-3 h-100">
+            <div class="fw-bold">Sourdough Bread</div>
+            <div class="text-muted small mb-2">In stock: 20</div>
+            <div class="d-flex gap-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                <button type="button" class="btn btn-sm btn-outline-danger">Disable</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card-soft p-3 h-100">
+            <div class="fw-bold">Butter Croissant</div>
+            <div class="text-muted small mb-2">In stock: 35</div>
+            <div class="d-flex gap-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                <button type="button" class="btn btn-sm btn-outline-danger">Disable</button>
+            </div>
+        </div>
+    </div>
+</div>

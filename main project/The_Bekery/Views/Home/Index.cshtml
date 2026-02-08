@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="hero">
+    <div class="container hero-wrap">
+        <div class="hero-image" style="background-image:url('https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="hero-card">
+            <div class="hero-badge">New Arrival</div>
+            <h1>Discover Our<br/>New Collection</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+            <a class="btn btn-primary px-4 py-2" asp-area="" asp-controller="Shop" asp-action="Index">BUY Now</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container text-center">
+        <h2 class="mb-2">Browse The Range</h2>
+        <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+        <div class="range-grid">
+            <div class="range-item">
+                <div class="range-img" style="background-image:url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="range-title">Living</div>
+            </div>
+            <div class="range-item">
+                <div class="range-img" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="range-title">Dining</div>
+            </div>
+            <div class="range-item">
+                <div class="range-img" style="background-image:url('https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="range-title">Bedroom</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-end mb-3">
+            <div>
+                <h2 class="mb-1">Our Products</h2>
+                <div class="text-muted">Freshly baked picks for you</div>
+            </div>
+            <a class="btn btn-outline-secondary" asp-area="" asp-controller="Shop" asp-action="Index">Show More</a>
+        </div>
+
+        <div class="product-grid">
+            @for (int i = 0; i < 8; i++)
+            {
+                <div class="product-card">
+                    <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=900&q=80');"></div>
+                    <div class="p-3">
+                        <div class="fw-bold">Sourdough Bread</div>
+                        <div class="text-muted small">Crispy outside, soft inside</div>
+                        <div class="mt-2 fw-bold">฿ 89</div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

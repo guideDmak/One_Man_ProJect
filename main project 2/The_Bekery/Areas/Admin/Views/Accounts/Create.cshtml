@@ -1,0 +1,63 @@
+@{
+    ViewData["Title"] = "Add Account";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    // หรือชั่วคราวใช้ _Layout ถ้ายังไม่มี _AdminLayout
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h3 class="mb-1">Add Account</h3>
+        <div class="text-muted">Create an account (UI only)</div>
+    </div>
+
+    <a class="btn btn-outline-secondary"
+       asp-area="Admin" asp-controller="Accounts" asp-action="Index">
+        Back
+    </a>
+</div>
+
+<div class="card shadow-sm border-0">
+    <div class="card-body">
+        <form>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Full name</label>
+                    <input class="form-control" placeholder="e.g., Oven Staff" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <input class="form-control" placeholder="e.g., staff@bakery.com" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Role</label>
+                    <select class="form-select">
+                        <option>Admin</option>
+                        <option>Staff</option>
+                        <option>User</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Status</label>
+                    <select class="form-select">
+                        <option>Active</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" placeholder="••••••••" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Confirm password</label>
+                    <input type="password" class="form-control" placeholder="••••••••" />
+                </div>
+            </div>
+
+            <div class="mt-4 d-flex gap-2">
+                <button type="button" class="btn btn-dark">Create</button>
+                <button type="button" class="btn btn-outline-secondary">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

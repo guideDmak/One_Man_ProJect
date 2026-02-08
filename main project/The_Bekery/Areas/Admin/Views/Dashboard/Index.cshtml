@@ -1,0 +1,45 @@
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-start mb-4">
+    <div>
+        <h3 class="mb-1">Dashboard</h3>
+        <div class="text-muted">Bakery operations overview</div>
+    </div>
+
+    <a class="btn btn-primary" asp-area="Admin" asp-controller="Accounts" asp-action="Index">
+        Manage Accounts
+    </a>
+</div>
+
+<div class="row g-3">
+    <div class="col-md-4">
+        <div class="card-soft p-3 h-100">
+            <div class="text-muted">Orders</div>
+            <div class="fs-4 fw-bold mb-2">128</div>
+            <a class="btn btn-outline-secondary btn-sm" asp-area="Admin" asp-controller="Orders" asp-action="Index">
+                View Orders
+            </a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card-soft p-3 h-100">
+            <div class="text-muted">Products</div>
+            <div class="fs-4 fw-bold mb-2">42</div>
+            <a class="btn btn-outline-secondary btn-sm" asp-area="Admin" asp-controller="Products" asp-action="Index">
+                View Products
+            </a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card-soft p-3 h-100">
+            <div class="text-muted">Accounts</div>
+            <div class="fs-4 fw-bold mb-2">4</div>
+            <a class="btn btn-outline-secondary btn-sm" asp-area="Admin" asp-controller="Accounts" asp-action="Index">
+                View Accounts
+            </a>
+        </div>
+    </div>
+</div>

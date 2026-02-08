@@ -1,0 +1,61 @@
+Auth UI Notes (UI-only, no real auth logic)
+==========================================
+
+Purpose
+- This update is focused on front-end pages only.
+- No database/session/cookie authentication was added.
+
+Files and Responsibilities
+1) Areas/Admin/Views/Auth/Login.cshtml
+- Login page layout and form fields.
+- Includes email/password/role demo, social buttons, and link to Register.
+
+2) Areas/Admin/Views/Auth/Register.cshtml
+- Register page layout and form fields.
+- Includes first/last name, email, password, confirm password.
+
+3) Areas/Admin/Views/Auth/Logout.cshtml
+- UI-only logout screen.
+- Provides buttons to return to Login or Home.
+
+4) Areas/Admin/Views/Shared/_AuthLayout.cshtml
+- Shared layout for Login/Register/Logout pages.
+- Loads Bootstrap + auth.css.
+
+5) wwwroot/css/auth.css
+- Main style file for all auth pages.
+- Contains card layout, form styles, social buttons, responsive behavior, and image panel styles.
+
+6) Areas/Admin/Views/Shared/_AdminLayout.cshtml
+- Sidebar action changed from "Lockout" to "Logout".
+- Route now points to Auth/Logout page.
+- Added topbar "Profile" button.
+
+7) Areas/Admin/Controllers/AuthController.cs
+- Added GET action: Logout() -> returns Logout view.
+
+8) Program.cs
+- Added friendly shortcuts:
+  /login -> Admin/Auth/Login
+  /register -> Admin/Auth/Register
+  /logout -> Admin/Auth/Logout
+  /profile -> Admin/Accounts/Index
+
+Image URLs Used
+- Login image:
+  https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1200&q=80
+- Register image:
+  https://images.unsplash.com/photo-1579783928621-7a13d66a62e1?auto=format&fit=crop&w=1200&q=80
+- Logout image:
+  https://images.unsplash.com/photo-1463320726281-696a485928c7?auto=format&fit=crop&w=1200&q=80
+
+How to swap images later
+- Open each auth view (Login/Register/Logout) and change the <img src=\"...\"> URL.
+- Keep high-resolution images (width around 1200+) for better visual quality.
+
+Note
+- Login POST behavior already existed before (role-based redirect demo).
+- If real authentication is needed later, implement it in AuthController + service layer.
+
+
+http://localhost:5224/admin/accounts/create

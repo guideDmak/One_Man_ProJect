@@ -1,0 +1,149 @@
+:root{
+  --cream: #fbf5ea;
+  --cream-2: #fff9f0;
+  --brown: #3b2a1f;
+  --caramel: #c58b3a;
+  --caramel-2: #e3b36a;
+  --shadow: 0 20px 60px rgba(59,42,31,.15);
+}
+
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(197,139,58,.18), transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(227,179,106,.22), transparent 45%),
+    var(--cream);
+  padding: 24px;
+}
+
+.login-card {
+  width: 900px;
+  height: 520px;
+  background: white;
+  border-radius: 22px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(197,139,58,.18);
+}
+
+.login-left {
+  width: 50%;
+  padding: 56px 60px;
+  background: linear-gradient(180deg, #ffffff, var(--cream-2));
+}
+
+.login-left h2{
+  letter-spacing: 1px;
+  color: var(--brown);
+}
+
+.login-left p{ color:#7b6a5f; }
+
+.form-group { position: relative; }
+
+.form-group .icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  opacity: .65;
+}
+
+.form-group input {
+  padding-left: 40px;
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid rgba(59,42,31,.12);
+  background: #fff;
+}
+
+.form-select{
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid rgba(59,42,31,.12);
+}
+
+.login-left .btn-primary {
+  background: linear-gradient(135deg, var(--caramel), var(--caramel-2));
+  border: none;
+  border-radius: 12px;
+  height: 46px;
+  box-shadow: 0 10px 20px rgba(197,139,58,.25);
+}
+
+.login-left .btn-primary:hover{
+  filter: brightness(.98);
+}
+
+.google-btn, .facebook-btn {
+  border-radius: 12px;
+  border: 1px solid rgba(59,42,31,.12);
+  background: #fff;
+}
+
+.login-right {
+  width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* bakery gradient */
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255,255,255,.28), transparent 45%),
+    radial-gradient(circle at 75% 70%, rgba(255,255,255,.18), transparent 55%),
+    linear-gradient(135deg, #a8692b, #e0b26f);
+}
+
+/* เพิ่มลาย “ครีม swirl” แบบเบเกอรี่ */
+.login-right::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    repeating-radial-gradient(circle at 20% 30%, rgba(255,255,255,.12), rgba(255,255,255,.12) 10px, transparent 10px, transparent 24px);
+  opacity:.35;
+}
+
+/* เพิ่มคำโปรยธีม bakery (optional) */
+.login-right::after{
+  content:"Freshly baked every day";
+  position:absolute;
+  bottom: 26px;
+  left: 28px;
+  color: rgba(255,255,255,.88);
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+
+.image-box {
+  width: 260px;
+  height: 360px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.16);
+  padding: 14px;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,.25);
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  overflow-y: hidden; /* กันแถบขาว/ช่องด้านล่างจาก scroll */
+}

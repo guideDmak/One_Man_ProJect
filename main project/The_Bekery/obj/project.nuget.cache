@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "RwUWBwfynwo=",
+  "success": true,
+  "projectFilePath": "/Users/madba/Pictures/One_Man_ProJect/main project/The_Bekery/The_Bekery.csproj",
+  "expectedPackageFiles": [
+    "/Users/madba/.nuget/packages/westwind.aspnetcore.livereload/0.6.0/westwind.aspnetcore.livereload.0.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

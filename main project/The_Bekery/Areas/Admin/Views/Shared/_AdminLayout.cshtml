@@ -1,0 +1,72 @@
+@{
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+    string NavClass(string controller) =>
+        string.Equals(currentController, controller, StringComparison.OrdinalIgnoreCase)
+            ? "nav-link active"
+            : "nav-link";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>@ViewData["Title"] - Bakery Admin</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/admin.css" />
+</head>
+
+<body>
+    <div class="admin-shell">
+        <aside class="admin-sidebar">
+            <div class="brand">
+                <div class="brand-badge">🍞</div>
+                <div>
+                    <div class="brand-name">Bakery Admin</div>
+                    <div class="brand-sub">mart style</div>
+                </div>
+            </div>
+
+            <nav class="nav flex-column admin-nav">
+                <a class="@NavClass("Dashboard")" asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+                <a class="@NavClass("Orders")" asp-area="Admin" asp-controller="Orders" asp-action="Index">Orders</a>
+                <a class="@NavClass("Products")" asp-area="Admin" asp-controller="Products" asp-action="Index">Products</a>
+                <a class="@NavClass("Accounts")" asp-area="Admin" asp-controller="Accounts" asp-action="Index">Accounts</a>
+            </nav>
+
+            <div class="sidebar-actions">
+                <a class="btn btn-lockout w-100" asp-route="logout-shortcut">
+                    Logout
+                </a>
+            </div>
+
+
+            <div class="sidebar-footer" style="text-align: center;">
+                <small class="text-muted">© @DateTime.Now.Year Bakery Platform</small>
+            </div>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-topbar">
+                <div class="topbar-left">
+                    <input class="topbar-search" placeholder="Search..." />
+                </div>
+                <div class="topbar-right">
+                    <a class="topbar-pill text-decoration-none" asp-route="profile-shortcut">
+                        👤 Profile
+                    </a>
+                </div>
+            </header>
+
+            <section class="admin-content">
+                @RenderBody()
+            </section>
+        </main>
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

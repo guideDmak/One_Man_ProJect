@@ -1,0 +1,74 @@
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AuthLayout.cshtml";
+    ViewData["Title"] = "Register";
+}
+
+<div class="login-wrapper">
+    <div class="login-card">
+
+        <!-- LEFT -->
+        <div class="login-left">
+            <h2 class="fw-bold mb-2">REGISTER</h2>
+            <p class="text-muted mb-4">
+                Create your account to access the dashboard.
+            </p>
+
+            <form method="post">
+                <div class="row g-3 mb-3">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <span class="icon">🧑</span>
+                            <input class="form-control" placeholder="First name" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <span class="icon">🧑</span>
+                            <input class="form-control" placeholder="Last name" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <span class="icon">📧</span>
+                    <input class="form-control" placeholder="Email" />
+                </div>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <span class="icon">🔒</span>
+                            <input type="password" class="form-control" placeholder="Password" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <span class="icon">🔒</span>
+                            <input type="password" class="form-control" placeholder="Confirm" />
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary w-100 mb-3">
+                    Create Account
+                </button>
+
+                <div class="text-center small">
+                    Already have an account?
+                    <a asp-area="Admin" asp-controller="Auth" asp-action="Login" class="text-decoration-none">
+                        Login
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="login-right">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+                     alt="register image" />
+            </div>
+        </div>
+
+    </div>
+</div>

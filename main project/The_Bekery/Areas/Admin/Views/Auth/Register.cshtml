@@ -1,0 +1,54 @@
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AuthLayout.cshtml";
+    ViewData["Title"] = "Register";
+}
+
+<div class="auth-shell">
+    <div class="auth-card">
+        <section class="auth-form-panel">
+            <h1 class="auth-title">Create Account</h1>
+            <p class="auth-subtitle">
+                Set up your profile to continue to the bakery admin workspace.
+            </p>
+
+            <form class="auth-form" method="post">
+                <div class="auth-grid-2">
+                    <div>
+                        <label class="auth-label" for="firstName">First name</label>
+                        <input id="firstName" name="firstName" class="auth-input" type="text" placeholder="John" />
+                    </div>
+                    <div>
+                        <label class="auth-label" for="lastName">Last name</label>
+                        <input id="lastName" name="lastName" class="auth-input" type="text" placeholder="Doe" />
+                    </div>
+                </div>
+
+                <label class="auth-label mt-3" for="registerEmail">Email</label>
+                <input id="registerEmail" name="email" class="auth-input" type="email" placeholder="Example@email.com" />
+
+                <div class="auth-grid-2 mt-3">
+                    <div>
+                        <label class="auth-label" for="registerPassword">Password</label>
+                        <input id="registerPassword" name="password" class="auth-input" type="password" placeholder="At least 8 characters" />
+                    </div>
+                    <div>
+                        <label class="auth-label" for="confirmPassword">Confirm password</label>
+                        <input id="confirmPassword" name="confirmPassword" class="auth-input" type="password" placeholder="Repeat password" />
+                    </div>
+                </div>
+
+                <button type="button" class="auth-submit-btn mt-4">Create account</button>
+            </form>
+
+            <p class="auth-footer-text">
+                Already have an account?
+                <a asp-route="login-shortcut">Sign in</a>
+            </p>
+        </section>
+        
+        <section class="auth-image-panel">
+            <img src="https://images.unsplash.com/photo-1579783928621-7a13d66a62e1?auto=format&fit=crop&w=1200&q=80"
+                 alt="Floral artwork for register page" />
+        </section>
+    </div>
+</div>

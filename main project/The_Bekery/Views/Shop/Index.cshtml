@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "Shop";
+}
+
+<section class="section">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-end mb-3">
+            <div>
+                <h1 class="mb-1">Shop</h1>
+                <div class="text-muted">Fresh bakery picks available today</div>
+            </div>
+            <a class="btn btn-outline-secondary" asp-area="" asp-controller="Home" asp-action="Index">Back Home</a>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="p-3">
+                    <div class="fw-bold">Sourdough Bread</div>
+                    <div class="text-muted small">Slow-fermented, crisp crust</div>
+                    <div class="mt-2 fw-bold">฿ 89</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="p-3">
+                    <div class="fw-bold">Butter Croissant</div>
+                    <div class="text-muted small">Flaky layers, buttery finish</div>
+                    <div class="mt-2 fw-bold">฿ 65</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="p-3">
+                    <div class="fw-bold">Chocolate Muffin</div>
+                    <div class="text-muted small">Rich cocoa with soft crumb</div>
+                    <div class="mt-2 fw-bold">฿ 55</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=900&q=80');"></div>
+                <div class="p-3">
+                    <div class="fw-bold">Cinnamon Roll</div>
+                    <div class="text-muted small">Warm spice and cream glaze</div>
+                    <div class="mt-2 fw-bold">฿ 72</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

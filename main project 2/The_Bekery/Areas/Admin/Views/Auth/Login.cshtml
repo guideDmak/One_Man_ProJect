@@ -1,0 +1,50 @@
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AuthLayout.cshtml";
+    ViewData["Title"] = "Login";
+}
+
+<div class="login-wrapper">
+    <div class="login-card">
+
+        <!-- LEFT -->
+        <div class="login-left">
+            <h2 class="fw-bold mb-2">LOGIN</h2>
+            <p class="text-muted mb-4">
+                How to i get started lorem ipsum dolor at?
+            </p>
+
+            <form method="post">
+                <div class="form-group mb-3">
+                    <span class="icon">👤</span>
+                    <input class="form-control" placeholder="Username" />
+                </div>
+
+                <div class="form-group mb-4">
+                    <span class="icon">🔒</span>
+                    <input type="password" class="form-control" placeholder="Password" />
+                </div>
+
+                <!-- mock role -->
+                <select class="form-select mb-4">
+                    <option>Admin</option>
+                    <option>Staff</option>
+                    <option>User</option>
+                </select>
+
+                <button class="btn btn-primary w-100 mb-4">
+                    Login Now
+                </button>
+
+            </form>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="login-right">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+                     alt="login image" />
+            </div>
+        </div>
+
+    </div>
+</div>

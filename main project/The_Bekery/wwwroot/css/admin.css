@@ -1,0 +1,211 @@
+:root{
+  --bg:#fff3f7;          /* pink cream background */
+  --card:#ffffff;
+  --text:#2b1d24;        /* cocoa text */
+  --muted:#7c5d6a;       /* muted rose */
+  --line:#f1d6e2;        /* soft pink border */
+
+  --accent:#ff4d8d;      /* strawberry */
+  --accent-2:#ff86b3;    /* light strawberry */
+  --accent-dark:#d81b60; /* strong pink */
+
+  --pill:#ffe2ee;        /* for small badges/pills */
+}
+
+
+html,body{height:100%;}
+body{margin:0;background:var(--bg);color:var(--text);}
+
+.admin-shell{
+  min-height:100vh;
+  display:flex;
+}
+
+.admin-sidebar{
+  width: 260px;
+  background: var(--card);
+  border-right:1px solid var(--line);
+  padding: 18px;
+  display:flex;
+  flex-direction:column;
+}
+
+.brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  padding: 8px 8px 18px;
+}
+
+.brand-badge{
+  width:44px;height:44px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  background:#fff3e6;border:1px solid #ffe3c7;
+  font-size:22px;
+}
+
+.brand-name{font-weight:800;}
+.brand-sub{font-size:12px;color:var(--muted);margin-top:-2px;}
+
+.admin-nav .nav-link{
+  border-radius:12px;
+  padding: 10px 12px;
+  color:#374151;
+  margin-bottom:6px;
+}
+
+.admin-nav .nav-link:not(.active):hover{
+  background:#fff0f6;
+  color: var(--accent-dark);
+}
+
+.admin-nav .nav-link.active{
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color:#fff !important;
+  box-shadow: 0 12px 26px rgba(255,77,141,.28);
+  font-weight: 600;
+}
+
+.admin-nav .nav-link.active:hover{
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color:#fff !important;
+}
+
+
+.sidebar-footer{margin-top:auto;padding:10px 8px;}
+
+.admin-main{flex:1;display:flex;flex-direction:column;}
+
+.admin-topbar{
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 0 22px;
+  background: var(--card);
+  border-bottom:1px solid var(--line);
+}
+
+.topbar-search{
+  width: 360px;
+  max-width: 55vw;
+  border:1px solid var(--line);
+  border-radius: 14px;
+  padding: 10px 12px;
+  outline:none;
+  background:#fff;
+}
+
+.topbar-pill{
+  padding: 8px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color: var(--text);
+  background: var(--pill);
+  font-weight: 600;
+}
+
+.admin-content{
+  padding: 22px;
+}
+
+.card-soft{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  box-shadow: 0 12px 30px rgba(17,24,39,.06);
+}
+
+.topbar-search:focus{
+  border-color: rgba(255,77,141,.6);
+  box-shadow: 0 0 0 4px rgba(255,77,141,.12);
+}
+
+/* Pink primary button */
+.btn-primary{
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(255,77,141,.20);
+}
+.btn-primary:hover{ filter: brightness(.98); }
+
+
+.card-soft{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow: 0 14px 34px rgba(43,29,36,.06);
+}
+
+
+.badge{
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.badge.bg-secondary{
+  background: var(--pill) !important;
+  color: var(--accent-dark);
+}
+
+
+.btn-dark{
+  background: linear-gradient(135deg, var(--accent), var(--accent-2)) !important;
+  border: none !important;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(255,77,141,.20);
+}
+.btn-dark:hover{ filter: brightness(.98); }
+
+
+/* Bakery edit button */
+.btn-outline-secondary{
+  color: var(--accent);
+  border-color: var(--accent-2);
+  background: transparent;
+}
+.btn-outline-secondary:hover{
+  background: var(--pill);
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+/* Bakery danger button (no harsh red) */
+.btn-outline-danger{
+  color: var(--accent-dark);
+  border-color: var(--accent-2);
+  background: transparent;
+}
+.btn-outline-danger:hover{
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: #fff;
+}
+
+
+.sidebar-actions{
+  margin-top: 10px;
+  padding: 10px 8px;
+}
+
+.btn-lockout{
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
+.btn-lockout:hover{
+  background: var(--pill);
+  border-color: rgba(255,77,141,.35);
+  box-shadow: 0 10px 22px rgba(255,77,141,.12);
+  color: var(--accent-dark);
+}
+
+.sidebar-actions{
+  margin-top: auto;   /* ดันลงล่าง */
+  padding: 10px 8px;
+}

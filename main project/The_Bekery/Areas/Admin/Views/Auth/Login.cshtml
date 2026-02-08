@@ -1,0 +1,61 @@
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AuthLayout.cshtml";
+    ViewData["Title"] = "Login";
+}
+
+<div class="auth-shell">
+    <div class="auth-card">
+        <section class="auth-form-panel">
+            <h1 class="auth-title">Welcome Back <span>👋</span></h1>
+            <p class="auth-subtitle">
+                Today is a new day. It's your day. You shape it.
+                Sign in to start managing your projects.
+            </p>
+
+            <form class="auth-form" method="post">
+                <label class="auth-label" for="email">Email</label>
+                <input id="email" name="email" class="auth-input" type="email" placeholder="Example@email.com" />
+
+                <label class="auth-label mt-3" for="password">Password</label>
+                <input id="password" name="password" class="auth-input" type="password" placeholder="At least 8 characters" />
+
+                <div class="auth-inline-row">
+                    <span></span>
+                    <a class="auth-link" asp-route="login-shortcut">Forgot Password?</a>
+                </div>
+
+                <label class="auth-label mt-3" for="role">Role (demo)</label>
+                <select id="role" name="role" class="auth-input auth-select">
+                    <option>Admin</option>
+                    <option>Staff</option>
+                    <option>User</option>
+                </select>
+
+                <button type="submit" class="auth-submit-btn mt-3">Sign in</button>
+            </form>
+
+            <div class="auth-divider">
+                <span>Or</span>
+            </div>
+
+            <button type="button" class="social-btn">
+                <span class="social-mark google-mark">G</span>
+                <span>Sign in with Google</span>
+            </button>
+            <button type="button" class="social-btn">
+                <span class="social-mark fb-mark">f</span>
+                <span>Sign in with Facebook</span>
+            </button>
+
+            <p class="auth-footer-text">
+                Don't have an account?
+                <a asp-route="register-shortcut">Sign up</a>
+            </p>
+        </section>
+
+        <section class="auth-image-panel">
+            <img src="~/images/img1.png"
+                 alt="Floral artwork for login page" />
+        </section>
+    </div>
+</div>

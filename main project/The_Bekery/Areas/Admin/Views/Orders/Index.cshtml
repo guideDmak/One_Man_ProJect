@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Orders";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-start mb-4">
+    <div>
+        <h3 class="mb-1">Orders</h3>
+        <div class="text-muted">Track and monitor incoming bakery orders</div>
+    </div>
+
+    <a class="btn btn-primary" asp-area="Admin" asp-controller="Products" asp-action="Index">
+        Manage Products
+    </a>
+</div>
+
+<div class="card-soft p-3">
+    <div class="table-responsive">
+        <table class="table align-middle mb-0">
+            <thead>
+                <tr class="text-muted">
+                    <th>#</th>
+                    <th>Customer</th>
+                    <th>Item</th>
+                    <th>Status</th>
+                    <th class="text-end">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1001</td>
+                    <td>Customer A</td>
+                    <td>Sourdough Bread</td>
+                    <td><span class="badge bg-success">Preparing</span></td>
+                    <td class="text-end">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1002</td>
+                    <td>Customer B</td>
+                    <td>Butter Croissant</td>
+                    <td><span class="badge bg-secondary">Queued</span></td>
+                    <td class="text-end">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

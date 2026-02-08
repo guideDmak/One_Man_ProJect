@@ -1,0 +1,99 @@
+@model List<The_Bekery.Areas.Admin.Controllers.AccountRow>
+@{
+    ViewData["Title"] = "Accounts";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-start mb-4">
+    <div>
+        <h3 class="mb-1">Accounts</h3>
+        <div class="text-muted">Admin / Staff / User accounts for bakery operations</div>
+    </div>
+
+    <a class="btn btn-primary"
+       asp-area="Admin" asp-controller="Accounts" asp-action="Create">
+        + Add Account
+    </a>
+</div>
+
+<!-- KPI Cards -->
+<div class="row g-3 mb-4">
+    <div class="col-md-3">
+        <div class="card-soft p-3">
+            <div class="text-muted">Total Accounts</div>
+            <div class="fs-3 fw-bold">@Model.Count</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card-soft p-3">
+            <div class="text-muted">Active</div>
+            <div class="fs-3 fw-bold">@Model.Count(x => x.Status == "Active")</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card-soft p-3">
+            <div class="text-muted">Staff</div>
+            <div class="fs-3 fw-bold">@Model.Count(x => x.Role == "Staff")</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card-soft p-3">
+            <div class="text-muted">Admins</div>
+            <div class="fs-3 fw-bold">@Model.Count(x => x.Role == "Admin")</div>
+        </div>
+    </div>
+</div>
+
+<!-- Table -->
+<div class="card-soft p-3">
+    <div class="d-flex gap-2 mb-3">
+        <input class="form-control" placeholder="Search name or email..." />
+        <select class="form-select" style="max-width: 180px;">
+            <option>All roles</option>
+            <option>Admin</option>
+            <option>Staff</option>
+            <option>User</option>
+        </select>
+        <select class="form-select" style="max-width: 180px;">
+            <option>All status</option>
+            <option>Active</option>
+            <option>Disabled</option>
+        </select>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table align-middle mb-0">
+            <thead>
+                <tr class="text-muted">
+                    <th style="width:80px;">#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th style="width:120px;">Role</th>
+                    <th style="width:120px;">Status</th>
+                    <th style="width:180px;" class="text-end">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var a in Model)
+            {
+                <tr>
+                    <td>@a.Id</td>
+                    <td class="fw-semibold">@a.Name</td>
+                    <td class="text-muted">@a.Email</td>
+                    <td><span class="badge bg-secondary">@a.Role</span></td>
+                    <td>
+                        @if (a.Status == "Active")
+                        { <span class="badge bg-success">Active</span> }
+                        else
+                        { <span class="badge bg-danger">Disabled</span> }
+                    </td>
+                    <td class="text-end">
+                        <button class="btn btn-sm btn-outline-secondary" type="button">Edit</button>
+                        <button class="btn btn-sm btn-outline-danger" type="button">Disable</button>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
